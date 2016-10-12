@@ -1,0 +1,2 @@
+# UpStudioWindowTranslationCH
+# UpStudioWindowTranslationCH

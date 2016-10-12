@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Translation Tool</title>
+    <script src="jquery.1.10.2.min.js"></script>
+    <script type="text/javascript" src="FileSaver.min.js"></script>
+    <script type="text/javascript" src="local_en.js"></script>
+    <style type="text/css">
+        table {
+            border: 1px solid black;
+            width: 100%;
+        }
+        table tr, table tr td, th {
+            border: 1px solid black;
+            width: 10%;
+        }
+
+        input {
+            height: 99%;
+            width: 98%;
+        }
+
+        h2{
+            background-color: #3990fa;
+            height: 20%;
+        }
+
+    </style>
+
+
+    <script>
+        // 检测是否可以使用
+        window.requestFileSystem = window.requestFileSystem || window.webkitRequestFileSystem;
+        window.resolveLocalFileSystemURL = window.resolveLocalFileSystemURL || window.webkitResolveLocalFileSystemURL;
+        var  fs = null;
+        var  msg = "";
+        if (window.requestFileSystem){
+            initFs();
+        }
+        function initFs(){
+            window.requestFileSystem(window.TEMPORARY,1024*10,function(filesystem){
+                fs = filesystem;
+                document.getElementById("result").innerHTML = "The current browser can use";
+                console.log("The current browser can use");
+            },error());
+
+            function error(e){
+                msg = "Error browser can not be used";
+            }
+        }
+
+        function  createFile(){
+            var  dataInfo = saveData();
+            dataInfo = JSON.stringify(dataInfo,null, "\t");
+            var blob = new Blob([dataInfo], {type: "text/plain;charset=utf-8"});
+            saveAs(blob, save_translation_fileName);
+        }
+    </script>
+</head>
+<body>
+
+    <output id="result"></output>
+    <input type="file" id="files" name="files[]" multiple /></br>
+    <output id="list"></output>
+    <output id="mresult"></output><br/>
+
+    <div id="dd" style="width: 100%">
+
+
+    </div>
+
+
+    </br>
+    <div style="width: 100%;display:flex;justify-content: center ">
+        <button style="background-color: darkgreen;margin: 0 auto;width: 30%;height: 20%;", onclick="createFile()" >SAVE</button>
+    </div>
+
+</body>
+
+<script>
+    var save_translation_fileName  = "translation.json";
+    function handleFileSelect(evt) {
+        var files = evt.target.files; // FileList object
+        // files is a FileList of File objects. List some properties.
+        var output = [];
+        for (var i = 0, f; f = files[i]; i++) {
+            output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
+                    f.size, ' bytes, last modified: ',
+                    f.lastModifiedDate.toLocaleDateString(), '</li>');
+            save_translation_fileName = f.name;
+        }
+        document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
+        readAsText();
+//        saveData();
+    }
+    document.getElementById('files').addEventListener('change', handleFileSelect, false);
+
+
+    var init_data;
+    var teble_id_arry = new Array();
+  //  $.getJSON("local_en.json", function(a)
+  //  {
+
+        init_data = chinese;
+        for(var i in init_data){//用javascript的for/in循环遍历对象的属性
+
+            if (i!= "version" && i!= "date" ){
+                teble_id_arry.push(i);
+
+                var div = document.getElementById("dd");
+                var  h2  = document.createElement("h2");
+                h2.innerHTML = i;
+                var table = document.createElement("table");//创建table
+                table.id = i;
+                var row = table.insertRow();//创建一行
+                var cell = row.insertCell();//创建一个单元
+                cell.innerHTML="Key";
+                cell = row.insertCell();//创建一个单元
+                cell.innerHTML="Value";
+                cell = row.insertCell();//创建一个单元
+                cell.innerHTML="Edit";
+                div.appendChild(h2);
+                div.appendChild(table);
+            }
+        }
+
+
+
+        for(var i in init_data){
+            if (i!= "version" && i!= "date" ) {
+
+
+                var  chang_html = "";
+                for(key in init_data[i])
+                {
+                    var temp = i+'.'+key;
+                    var input_name = i+key;
+                    input_name = input_name.replace('</br>',"");
+                    temp = temp.replace(/\r\n/g,"");
+                    temp = temp.replace(/\n/g,"")
+
+                    var input_front_id = stripscript(temp);
+                    chang_html += "<tr>";
+                    chang_html += "<td>"
+                            + key
+                            + "</td><td>"
+                            + init_data[i][key]
+                            + "</td><td>"
+                            + "<input oninput='OnInput(event,this)' name="+input_name+" id= '"+input_front_id+"' style='background-color: rgba(210, 38, 19, 0.49) ' />"
+                            + "</td>";
+                    chang_html += "</tr>";
+
+                }
+
+                var  id_init = "#"+i;
+                $(id_init).append(chang_html);
+
+            }
+        }
+
+   // });
+
+
+
+    var  data;
+    function readAsText() {
+        var file = document.getElementById("files").files[0];
+        var reader = new FileReader();
+        reader.readAsText(file);
+        reader.onload = function (e) {
+            data = strToJson(this.result);
+            var html_front = "";
+            var html_print = "";
+            var html_graphic = "";
+
+            for(var i in data){
+                if (i!= "version" && i!= "date" ) {
+                    for(key in data[i]) {
+                        var in_putId_front = i+'.'+key;
+                        in_putId_front = stripscript(in_putId_front);
+                        if(document.getElementById(in_putId_front)!=undefined)
+                        {
+                            document.getElementById(in_putId_front).value=data[i][key];
+                            document.getElementById(in_putId_front).style.backgroundColor= "#ffffff";
+                        }else
+                        {
+                            console.log(in_putId_front);
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+
+
+ //
+    function stripscript(s) {
+        var pattern = new RegExp("[`~!@#$^&*()=|{}':;',\\[\\].<>/?~！@#￥……&*（）&mdash;—|{}【】‘；：”“'。，、？_]")
+        var rs = "";
+        for (var i = 0; i < s.length; i++) {
+            rs = rs + s.substr(i, 1).replace(pattern, '');
+        }
+        return rs;
+    }
+
+
+    function OnInput (event,obj) {
+        console.log(event.target.value.length);
+        if(event.target.value.length>0)
+        {
+            obj.style.backgroundColor = "#ffffff";
+        }else {
+
+            obj.style.backgroundColor = "rgba(210, 38, 19, 0.49)";
+        }
+    }
+    // Internet Explorer
+    function OnPropChanged (event) {
+        if (event.propertyName.toLowerCase () == "value") {
+            alert ("The new content: " + event.srcElement.value);
+        }
+    }
+
+
+
+    var saveKey = new Object();
+    function saveData()
+    {
+        for(var i in init_data){
+
+            if (i!= "version" && i!= "date" )
+            {
+                var local_object_info ;
+                var  id_init = "#"+i;
+                local_object_info =$(id_init).find("input");
+                var saveInfo = new Object();
+
+                $.each(local_object_info, function (m, ipt)
+                {
+                    var save_temp = i
+                    var key = $(ipt).attr("name");
+                    console.log(ipt)
+                    key=key.replace(i,'');
+                    var value = $(ipt).val();
+                    saveInfo[key] = value;
+                });
+                saveKey[i] = saveInfo.valueOf();
+            }
+        }
+
+        return saveKey;
+
+    }
+
+
+    function strToJson(str){
+        var json = eval('(' + str + ')');
+        return json;
+    }
+
+</script>
+</html>
