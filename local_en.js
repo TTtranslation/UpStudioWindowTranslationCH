@@ -1,7 +1,7 @@
 ﻿var chinese ={
     "name":{
     	"version": "2.0",
-		"date": "2017-08-01",
+		"date": "2017-08-10",
        	"name":"zh"
     },
 	"_front": {
@@ -400,7 +400,21 @@
 		"edit_font": "字体：",
 		"edit_text": "文本：",
 		"model_edit_font": "模型编辑",
-		"message_message": "反馈"
+		"message_message": "反馈",
+		"edit_slide_count": "边数输入的范围必须是3-12",
+		"edit_slide_point": "点数输入的范围必须是5-30",
+		"edit_top_botom": "底半径和顶半径不能同时为0",
+		"spc_one": "线框",
+		"spc_two": "实体",
+		"spc_thr": "透视",
+		"spc_for": "实体和线框",
+		"circle_to_floor": "一键置底",
+		"message_send_succ": "发送成功",
+		"message_send_fail": "发送失败",
+		"message_sending": "发送中...",
+		"input_correct_email": "请输入合法的邮箱地址",
+		"upload_succ": "上传成功",
+		"upload_fail": "上传失败"
 	},
 	"print": {
 		"PrinterStatus-1":"打印机未连接",
