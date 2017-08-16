@@ -1,7 +1,7 @@
 ﻿var chinese ={
     "name":{
     	"version": "2.0",
-		"date": "2017-08-10",
+	"date": "2017-08-16",
        	"name":"zh"
     },
 	"_front": {
@@ -348,7 +348,7 @@
 		"connect_print_by_ip": "要连接到打印机，请输入其IP地址和可选的打印机密码",
 		"connect_other_network": "加入其他网络",
 		"m1_and_s1": "m1与s1的值相差不可超过+-1",
-		"circle_floor_state": "对齐到底板",
+		"circle_floor_state": "选面置底",
 		"version_loading": "正在下载 ...",
 		"model_radius": "半径：",
 		"model_height": "高度：",
@@ -364,7 +364,7 @@
 		"network_nouse_agent": "不使用代理",
 		"network_use_http": "HTTPS代理",
 		"contour_linewidth": "轮廓线宽",
-		"height_button_font": "单击指定的平面,将模型放到底板上",
+		"height_button_font": "选择想要成为底部的模型面，然后点击“确定”",
 		"loop_input_error": "输入范围为默认轮廓线宽的 -0.15 到 +0.25mm",
 		"network_testing": "测试中...",
 		"address_and_port":"地址或端口都不能为空",
@@ -414,7 +414,9 @@
 		"message_sending": "发送中...",
 		"input_correct_email": "请输入合法的邮箱地址",
 		"upload_succ": "上传成功",
-		"upload_fail": "上传失败"
+		"upload_fail": "上传失败",
+		"model_reserze": "反转",
+		"please_input_your_num": "请输入您的联系方式"
 	},
 	"print": {
 		"PrinterStatus-1":"打印机未连接",
