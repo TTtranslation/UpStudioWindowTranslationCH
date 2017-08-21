@@ -584,6 +584,7 @@
 		"Fatal Error":"致命错误"
 	},
 	"graphic": {
+		"Invalid":"无效输入",
 		"Filepath: ": "文件路径: ",
 		"Size: ": "模型尺寸: ",
 		"Min-Size: ": "最小位置: ",
