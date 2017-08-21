@@ -1,7 +1,7 @@
 ﻿var chinese ={
     "name":{
     	"version": "2.0",
-	"date": "2017-08-16",
+		"date": "2017-08-21",
        	"name":"zh"
     },
 	"_front": {
@@ -579,7 +579,9 @@
 		"Unlimited": "无限制",
 		"Keep_on_download": "继续下载",
 		"ERROR: Feedback ERROR":"错误：意见反馈提交失败",
-		"Crashed. Do you upload error messages?":"程序异常，是否上传错误信息？"
+		"Crashed. Do you upload error messages?":"程序异常，是否上传错误信息？",
+		"ERROR: Printing,cannot stop heating":"错误：正在打印，不能停止加热",
+		"Fatal Error":"致命错误"
 	},
 	"graphic": {
 		"Filepath: ": "文件路径: ",
@@ -618,7 +620,8 @@
 		"8 model": "8 个模型",
 		"custom": "自定义",
 		"Voxelization": "体素化",
-		"Edit":"编辑"
+		"Edit":"编辑",
+		"Voxel Size":"体素大小"
 	},
 	"image_front": {
 		"_Model_Height": "模型高度",
