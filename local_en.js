@@ -1,7 +1,7 @@
 ﻿var chinese ={
     "name":{
     	"version": "2.0",
-		"date": "2017-08-23",
+		"date": "2017-08-25",
        	"name":"zh"
     },
 	"_front": {
@@ -239,8 +239,6 @@
 		"Manage" : "管理",
 		"Model_unit": "单位：",
 		"Auto_height_end": "自动对高结束",
-		"Flex_plat": "麦拉片",
-		"Ward_plat": "蜂窝板",
 		"Model_upload": "发布",
 		"Unlimited": "无限制",
 		"Error_prompt": "发生错误",
@@ -336,8 +334,6 @@
 		"Axial_test": "M1：实际值",
 		"Axial_alert_message": "理论值或实际值不能为0",
 		"Choose_floor": "打印底板：",
-		"Ward_and_Flex": "蜂窝板+麦拉片",
-		"Glass_plat": "4mm玻璃板",
 		"wifi_high_setting":"高级设置",
 		"Usb_connect_network": "连接",
 		"Back": "返回",
@@ -383,12 +379,12 @@
 		"message_email": "联系方式：",
 		"printer_sn": "打印机序列号：",
 		"message_load_img": "上传截图：",
-		"please_load_img": "请上传图片",
+		"please_load_img": "请上传不大于4M的图片",
 		"please_input_sn": "请输入数字",
 		"message_input_email":"请输入邮件",
 		"message_looking": "浏览",
 		"message_send": "发送",
-		"problem_and_information": "问题和意见：",
+		"problem_and_information": "问题描述：",
 		"model_spcview": "显示模式",
 		"model_pou": "切平面",
 		"edit_parames": "参数",
@@ -417,7 +413,7 @@
 		"upload_succ": "上传成功",
 		"upload_fail": "上传失败",
 		"model_reserze": "反转",
-		"please_input_your_num": "请输入您的联系方式",
+		"please_input_your_num": "联系方式和问题描述不可为空",
 		"model_radius_star_limit": "外半径不能小于内半径"
 	},
 	"print": {
@@ -584,7 +580,8 @@
 		"Crashed. Do you upload error messages?":"程序异常，是否上传错误信息？",
 		"ERROR: Printing,cannot stop heating":"错误：正在打印，不能停止加热",
 		"Fatal Error":"致命错误",
-		"Range":"输入范围:"
+		"Range":"输入范围:",
+		"ERROR: File size must be less than 4MB":"错误：图片大小不可大于4M"
 	},
 	"graphic": {
 		"Filepath: ": "文件路径: ",
@@ -657,5 +654,5 @@
 		"_image_pic": "相框",
 		"_image_relative": "相对"
 	},
-     "image": { }
+     "image": {}
 }
