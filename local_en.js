@@ -1,7 +1,7 @@
 ﻿var chinese ={
     "name":{
     	"version": "2.0",
-		"date": "2017-08-25",
+		"date": "2017-08-29",
        	"name":"zh"
     },
 	"_front": {
@@ -81,7 +81,6 @@
 		"An_email_to_reset_your_password_has_been_sent_to_your_email_address": "重置密码邮件发送成功",
 		"Failed_to_Reset_Password": "重置密码失败",
 		"Home": "主页",
-		"Import_Model_or_Image": "添加模型或图片",
 		"Print": "打印",
 		"Initialize_Printer": "初始化打印机",
 		"Calibrate": "校准",
@@ -414,7 +413,8 @@
 		"upload_fail": "上传失败",
 		"model_reserze": "反转",
 		"please_input_your_num": "联系方式和问题描述不可为空",
-		"model_radius_star_limit": "外半径不能小于内半径"
+		"model_radius_star_limit": "外半径不能小于内半径",
+		"circle_lock": "锁定比例"
 	},
 	"print": {
 		"PrinterStatus-1":"打印机未连接",
@@ -576,7 +576,6 @@
 		"ERROR: Connection Failed":"错误：连接失败",
 		"Unlimited": "无限制",
 		"Keep_on_download": "继续下载",
-		"ERROR: Feedback ERROR":"错误：意见反馈提交失败",
 		"Crashed. Do you upload error messages?":"程序异常，是否上传错误信息？",
 		"ERROR: Printing,cannot stop heating":"错误：正在打印，不能停止加热",
 		"Fatal Error":"致命错误",
@@ -621,8 +620,7 @@
 		"custom": "自定义",
 		"Voxelization": "体素化",
 		"Edit":"编辑",
-		"Voxel Size":"体素大小:",
-		"Invalid":"无效输入"
+		"Voxel Size":"体素大小:"
 	},
 	"image_front": {
 		"_Model_Height": "模型高度：",
