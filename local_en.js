@@ -1,4 +1,4 @@
-﻿var chinese =
+﻿var chinese ={
     "name":{
     	"version": "2.1",
 		"date": "2017-09-06",
