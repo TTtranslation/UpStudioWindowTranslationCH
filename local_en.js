@@ -1,7 +1,7 @@
 ﻿var chinese ={
     "name":{
-    	"version": "2.1",
-		"date": "2017-09-06",
+    	"version": "2.2",
+		"date": "2017-10-24",
        	"name":"zh"
     },
 	"_front": {
@@ -135,9 +135,9 @@
 		"Surface": "密闭层数：",
 		"Angle": "角&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度：",
 		"Support": "支撑",
-		"Dense": "支撑层数：",
-		"Area": "支撑面积：",
-		"Space": "支撑间隔：",
+		"Dense": "层&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数：",
+		"Area": "面&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;积：",
+		"Space": "间&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;隔：",
 		"No_Raft": "无底座：",
 		"No_Support": "无支撑：",
 		"Stable_Support": "稳固支撑：",
@@ -419,12 +419,30 @@
 		"print_repeat_error":"槽位中没有可重复打印的数据",
 		"qr_code": "二维码",
 		"qr_code_button": "生成二维码",
-		"demo_opration_font1": "校准时请将校准片放在喷嘴与平台之间，点击+/-按钮调整对应点平台高度，移动校准片感觉有轻微助力时该点调整完毕。",
+		"demo_opration_font1": "校准时请将校准片放在喷嘴与平台之间，点击+/-按钮调整对应点平台高度，移动校准片感觉有轻微阻力时该点调整完毕。",
 		"demo_opration_font2": "喷嘴高度设置为",
 		"demo_opration_font3": "校准成功!",
 		"cancel_model_progress": "取消加载",
 		"add_model_publish": "添加子模型",
-		"publish_model_state": "状态"
+		"publish_model_state": "状态",
+		"input_upload_name": "请输入上传模型的名称",
+		"exit_preview_status": "退出预览",
+		"branch_normal_angle": "支撑角度",
+		"branch_normal_point": "悬边/悬点",
+		"branch_angle": "角度",
+		"branch_button":"启用",
+		"branch_state": "显示",
+		"branch_radius": "半径",
+		"branch_area": "面积",
+		"branch_show": "显示支撑体",
+		"branch_all": "显示全部",
+		"branch_title": "对模型其他操作，可能会影响支撑",
+		"branch_hide_model": "隐藏模型",
+		"branch_length": "长度",
+		"branch_pull": "拉伸",
+		"branch_loading_font": "正在生成支撑,请稍后...",
+		"branch_title_font": "支撑编辑",
+		"branch_deleat_exit": "重置/退出"
 	},
 	"print": {
 		"PrinterStatus-1":"打印机未连接",
@@ -644,7 +662,9 @@
 		"custom": "自定义",
 		"Voxelization": "体素化",
 		"Edit":"编辑",
-		"Voxel Size":"体素大小:"
+		"Voxel Size":"体素大小:",
+		"models are too large(more than 4000000) to upload!":"失败，模型面片数超过400万！",
+		"models are too large(more than 2000000) to upload!":"失败，模型面片数超过200万！"
 	},
 	"image_front": {
 		"_Model_Height": "模型高度：",
