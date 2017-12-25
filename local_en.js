@@ -1,7 +1,7 @@
 ﻿var chinese ={
     "name":{
     	"version": "2.2",
-		"date": "2017-10-24",
+		"date": "2017-12-25",
        	"name":"zh"
     },
 	"_front": {
@@ -442,7 +442,8 @@
 		"branch_pull": "拉伸",
 		"branch_loading_font": "正在生成支撑,请稍后...",
 		"branch_title_font": "支撑编辑",
-		"branch_deleat_exit": "重置/退出"
+		"branch_deleat_exit": "重置/退出",
+		"easy_show_font": "简易模式"
 	},
 	"print": {
 		"PrinterStatus-1":"打印机未连接",
