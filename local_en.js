@@ -1,7 +1,7 @@
 ﻿var chinese ={
     "name":{
     	"version": "2.2",
-		"date": "2017-12-25",
+		"date": "2018-1-16",
        	"name":"zh"
     },
 	"_front": {
@@ -443,7 +443,8 @@
 		"branch_loading_font": "正在生成支撑,请稍后...",
 		"branch_title_font": "支撑编辑",
 		"branch_deleat_exit": "重置/退出",
-		"easy_show_font": "简易模式"
+		"easy_show_font": "简易模式",
+		"save_branch_message": "确定要保留当前修改后的支撑？"
 	},
 	"print": {
 		"PrinterStatus-1":"打印机未连接",
@@ -579,8 +580,8 @@
 		"Run File":"运行文件",
 		"ERROR: Input Not Valid":"错误：输入无效",
 		"Select active file":"选择激活文件",
-		"ERROR: X1 Or X2 Input Error":"错误：X1或X2输入错误",
-		"ERROR: Z Or H Input Error":"错误：Z或H输入错误",
+		"ERROR: X1 Or X2 Input Error":"错误：X1与X2的差值过大",
+		"ERROR: Z Or H Input Error":"错误：请减小Z值或增大H值 ",
 		"ERROR: Save Error":"错误：保存失败",
 		"ERROR: User Not Login":"错误：用户未登录",
 		"ERROR: Model validation failure":"错误：模型验证失败",
@@ -623,7 +624,8 @@
 		"Ready":"待发布",
 		"Prepare Data":"准备数据",
 		"Wating":"等待发布",
-		"RePublish":"重新发布"
+		"RePublish":"重新发布",
+		"ERROR: Gcode printing is not compatible with firmware version 346 or lower":"固件版本低于或等于346暂不支持Gcode打印"
 	},
 	"graphic": {
 		"Filepath: ": "文件路径: ",
