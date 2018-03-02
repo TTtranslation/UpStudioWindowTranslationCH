@@ -1,7 +1,7 @@
 ﻿var chinese ={
     "name":{
-    	"version": "2.2",
-		"date": "2018-1-16",
+    	"version": "2.3",
+		"date": "2018-03-02",
        	"name":"zh"
     },
 	"_front": {
@@ -132,7 +132,7 @@
 		"Date": "日期",
 		"Choose": "选&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;择：",
 		"Part": "密闭",
-		"Surface": "密闭层数：",
+		"Surface": "层&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数：",
 		"Angle": "角&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度：",
 		"Support": "支撑",
 		"Dense": "层&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数：",
@@ -154,8 +154,8 @@
 		"Nozzle_Height": "喷嘴高度",
 		"Set": "设置",
 		"Nozzle_Detect": "自动对高",
-		"Demo_Op": "演示操作",
-		"Demo_Op_Over": "演示结束",
+		"Demo_Op": "手动对高",
+		"Demo_Op_Over": "完成手动对高",
 		"Set_nozzle_height_is": "设置喷嘴高度为:",
 		"Compensation": "补偿",
 		"Set_Nozzle_Height_as": "保存喷嘴高度为",
@@ -358,7 +358,7 @@
 		"network_test": "测试",
 		"network_nouse_agent": "不使用代理",
 		"network_use_http": "HTTPS代理",
-		"contour_linewidth": "轮廓线宽",
+		"contour_linewidth": "轮廓线宽：",
 		"height_button_font": "选择想要成为底部的模型面，然后点击“确定”",
 		"loop_input_error": "输入范围为默认轮廓线宽的 -0.15 到 +0.25mm",
 		"network_testing": "测试中...",
@@ -444,7 +444,12 @@
 		"branch_title_font": "支撑编辑",
 		"branch_deleat_exit": "重置/退出",
 		"easy_show_font": "简易模式",
-		"save_branch_message": "确定要保留当前修改后的支撑？"
+		"save_branch_message": "确定要保留当前修改后的支撑？",
+		"input_num": "送进比例",
+		"cail_num": "校准值",
+		"manual_setting": "手动设置：",
+		"opa_save": "保存",
+		"add_printer_close":"关闭"
 	},
 	"print": {
 		"PrinterStatus-1":"打印机未连接",
@@ -472,6 +477,9 @@
 		"PrinterStatus21": "版权限制",
 		"PrinterStatus22": "打印次数限制",
 		"PrinterStatus23": "通讯错误",
+		"PrinterStatus24": "系统进入错误状态",
+		"PrinterStatus25": "打印底板跟换失败",
+		"PrinterStatus26": "换板完成，插入新底板",
 		"ERROR": "发生错误",
 		"ERROR: Task cannot be performed during printing": "错误：打印机运行中，不能进行此操作",
 		"ERROR: Incorrect material": "错误：打印机材料设置错误",
@@ -581,7 +589,7 @@
 		"ERROR: Input Not Valid":"错误：输入无效",
 		"Select active file":"选择激活文件",
 		"ERROR: X1 Or X2 Input Error":"错误：X1与X2的差值过大",
-		"ERROR: Z Or H Input Error":"错误：请减小Z值或增大H值 ",
+		"ERROR: Z Or H Input Error":"错误：请减小Z值或增大H值",
 		"ERROR: Save Error":"错误：保存失败",
 		"ERROR: User Not Login":"错误：用户未登录",
 		"ERROR: Model validation failure":"错误：模型验证失败",
@@ -625,7 +633,8 @@
 		"Prepare Data":"准备数据",
 		"Wating":"等待发布",
 		"RePublish":"重新发布",
-		"ERROR: Gcode printing is not compatible with firmware version 346 or lower":"固件版本低于或等于346暂不支持Gcode打印"
+		"ERROR: Gcode printing is not compatible with firmware version 346 or lower":"固件版本低于或等于346暂不支持Gcode打印",
+		"Clear SD?":"重置SD卡后，喷嘴高度、九点补偿值、模型校准值、槽位信息将清0，材料信息将变为默认值，是否确认重置？"
 	},
 	"graphic": {
 		"Filepath: ": "文件路径: ",
