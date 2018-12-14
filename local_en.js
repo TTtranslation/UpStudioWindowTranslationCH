@@ -1,7 +1,7 @@
 ﻿var chinese ={
     "name":{
     	"version": "2.6",
-		"date": "2018-09-26",
+		"date": "2018-12-14",
        	"name":"zh"
     },
 	"_front": {
